@@ -15,14 +15,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tvText = findViewById(R.id.tvText)
-        tvText2 = findViewById(R.id.tvText2)
         var subText:String = text.substringAfter('<')
         var ssubText:String = subText.substringBefore('>')
         tvText?.setText(ssubText)
 
-        var subText2:String = text.substringAfterLast('<')
-        var ssubText2:String = subText2.substringBeforeLast('>')
-        tvText2?.setText(ssubText2)
+        tvText2 = findViewById(R.id.tvText2)
+        var subText3:String = text.substringAfter('>')
+        var subText4:String = subText3.substringAfterLast('<')
+        var subText5:String = subText4.substringBeforeLast('>')
+        tvText2?.setText(subText5)
 
 
     }
